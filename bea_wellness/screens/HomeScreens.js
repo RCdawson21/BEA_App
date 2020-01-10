@@ -234,7 +234,7 @@ export default class HomeScreen extends Component {
         </View>
       </ScrollView>
 
-      
+
     </View>
   );
 }

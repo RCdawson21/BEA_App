@@ -7,6 +7,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreens';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import CalendarScreen from '../screens/CalendarScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -68,10 +69,28 @@ SettingsStack.navigationOptions = {
 
 SettingsStack.path = '';
 
+const CalendarStack = createStackNavigator(
+  {
+       Calendar: CalendarScreen
+  },
+  config
+);
+
+CalendarStack.navigationOptions ={
+  tabBarLabel:'Calendar',
+  tabBarIcon: ({focused}) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options':'md-options'} />
+  ),
+};
+
+CalendarStack.path = '';
+
+
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   LinksStack,
   SettingsStack,
+  CalendarStack,
 });
 
 tabNavigator.path = '';
