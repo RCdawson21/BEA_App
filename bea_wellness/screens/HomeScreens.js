@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
    textAlign: 'center',
  },
  contentContainer: {
-   paddingTop: 30,
+   paddingTop: 34,
    color: 'green'
  },
  welcomeContainer: {
