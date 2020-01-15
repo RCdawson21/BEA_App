@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
    marginBottom: 20,
    color: 'rgba(0,0,0,0.4)',
    fontSize: 14,
-   lineHeight: 19,
+   lineHeight: 18,
    textAlign: 'center',
  },
  contentContainer: {
